@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+body{
+	font-family: "Raleway";
+}
+
+.navbar-default{
+	padding-bottom: 7px;
+	padding-top: 7px;
+}
+
+header{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+}
+.titulo{
+	font-size: 28px;
+	font-weight: bolder;
+}
+
+footer{
+	margin-top: 50px;
+	padding-top: 5px;
+	border-top: 1px solid #f2f2f2;
+	
+}
+.navbar-brand {
+    font-size: 26px;
+    color: #fff !important;
+}
+
+img{
+	width: 150px;
+	height: 80px;
+}
+
+.tinymce{
+	border: 1px solid #ccc;
+	font-family: "Raleway" !important;
+	font-size: 33px !important;
+}
