@@ -10,7 +10,7 @@
 
 	<div class="col-md-6">
 	<?php echo $this->Session->flash(); ?>
-		<?php echo $this->Form->create('Contato'); ?>
+		<?php echo $this->Form->create('Contato', array('type' => 'post')); ?>
 		<div class="form-group">
 			<?php echo $this->Form->input('Contato.nome', array( 'type' => 'text', 'class' => 'form-control  input-lg', 'id' => 'nome_id')); ?>
 		</div>
@@ -34,7 +34,7 @@
 			<?php echo $this->Form->textarea('Contato.msg', array('class' => 'form-control', 'id' => 'msg_id')); ?>
 		</div>
 		<div class="form-group">
-		<div class="g-recaptcha" data-sitekey="6Lcy7hkTAAAAAGvun06f9_JeScIRloCz9wKJQCqS"></div>
+			<div class="g-recaptcha" data-sitekey="6Lcy7hkTAAAAAGvun06f9_JeScIRloCz9wKJQCqS"></div>
 		</div>
 	<?php echo $this->Form->submit('Enviar mensagem', array('class' => 'btn btn-default btn-block btn-info btn-lg')); ?>
 	<?php echo $this->Form->end();?>

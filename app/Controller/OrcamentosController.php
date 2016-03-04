@@ -31,7 +31,7 @@ class OrcamentosController extends AppController {
 			// set view variables as normal
 			$this->set('from', $name);
 			$this->set('msg', $msg);
-			$this->Email->to = 'Orcamento@limamoveissobmedida.com.br';
+			$this->Email->to = 'contato@limamoveissobmedida.com.br';
 			//$this -> Email -> to = 'eduardoscoelho@hotmail.com';
 			$this->Email->subject = $subject;
 			$this->Email->replyTo = $from;
