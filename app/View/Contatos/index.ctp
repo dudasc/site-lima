@@ -32,7 +32,10 @@
 		<div class="form-group">
 			<?php echo $this->Form->label('Mensagem'); ?>
 			<?php echo $this->Form->textarea('Contato.msg', array('class' => 'form-control', 'id' => 'msg_id')); ?>
-	</div>
+		</div>
+		<div class="form-group">
+		<div class="g-recaptcha" data-sitekey="6Lcy7hkTAAAAAGvun06f9_JeScIRloCz9wKJQCqS"></div>
+		</div>
 	<?php echo $this->Form->submit('Enviar mensagem', array('class' => 'btn btn-default btn-block btn-info btn-lg')); ?>
 	<?php echo $this->Form->end();?>
 
@@ -45,6 +48,6 @@
 		<p>Rua Profª Carolina Duarte Fernandes, 100 - Centro <br>
 		Timbé do Sul/SC. CEP 88940-000</p><p>
 <span style="font-size: 1.3em; font-weight: 400">(48) 3536 1483</span><br>
-contato@limamoveis.com.br</p>
+contato@limamoveissobmedida.com.br</p>
 	</div>
 </div>

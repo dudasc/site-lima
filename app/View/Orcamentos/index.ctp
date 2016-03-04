@@ -64,6 +64,9 @@
 			<?php echo $this -> Form -> label('Descreva seu projeto'); ?>
 			<?php echo $this -> Form -> textarea('descricao', array( 'class' => 'form-control', 'id' => 'desc_id')); ?>
 		</div>
+		<div class="form-group">
+			<div class="g-recaptcha" data-sitekey="6Lcy7hkTAAAAAGvun06f9_JeScIRloCz9wKJQCqS"></div>
+		</div>
 	<br>
 	<?php echo $this -> Form -> submit('Enviar mensagem', array('class' => 'btn btn-default btn-block btn-lg btn-info')); ?>
 	<?php echo $this -> Form -> end();?>
