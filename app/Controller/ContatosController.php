@@ -33,7 +33,7 @@ class ContatosController extends AppController {
 			$this->Email->replyTo = $from;
 			$this->Email->from = $name . '<' . $from . '>';
 
-			if ($this->Email->send($msg)) {
+			if ($this->Email->send()) {
 			$this->Session->setFlash('<div class="alert alert-success">
 								<button type="button" class="close" data-dismiss="alert">
 									&times;
