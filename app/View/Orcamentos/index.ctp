@@ -3,13 +3,9 @@
         <h1 class="page-header">Orçamento</h1>
     </div>
 </div>
-
-<p>Preencha e envie o formulário abaixo para realizarmos um orçamento para você.</p>
-<br>
-
-	
-	<div class="row">
-		<div class="col-md-7">
+<p>Preencha e envie o formulário abaixo para realizarmos um orçamento para você.</p><br>
+<div class="row">
+	<div class="col-md-7">
 		<?php echo $this -> Session -> flash(); ?>
 		<?php echo $this -> Form -> create('Orcamento'); ?>
 		<div class="form-group">
@@ -18,7 +14,7 @@
 		<div class="form-group">
 			<?php echo $this -> Form -> label('Email'); ?>
 			<div class="input-group">
-			 <span class="input-group-addon">@</span>
+		 		<span class="input-group-addon">@</span>
 				<?php echo $this -> Form -> input('email', array('label' => false, 'type' => 'email', 'class' => 'form-control  input-lg', 'id' => 'email_id')); ?>
 			</div>
 		</div>
@@ -37,10 +33,7 @@
 			
 		</div>
 		<div class="form-group">
-			<?php echo $this->Form->label('Ambiente'); ?>
-			
-
-			 <?php
+			<?php echo $this->Form->label('Ambiente'); 
 			 	$options = array(
 					   array(
 					      'cozinha' => 'Cozinhas',
@@ -54,23 +47,13 @@
 					   )
 					);
 			 ?>
-			 <?php echo $this->Form->select('ambiente', $options, array('class' => 'form-control  input-lg', 'id' => 'ambiente_id')); ?>
-			
+			 <?php echo $this->Form->select('ambiente', $options, array('class' => 'form-control  input-lg', 'id' => 'ambiente_id')); ?>			
 		</div>
-
-
-
 		<div class="form-group">
 			<?php echo $this -> Form -> label('Descreva seu projeto'); ?>
 			<?php echo $this -> Form -> textarea('descricao', array( 'class' => 'form-control', 'id' => 'desc_id')); ?>
 		</div>
-		<div class="form-group">
-			<div class="g-recaptcha" data-sitekey="6Lcy7hkTAAAAAGvun06f9_JeScIRloCz9wKJQCqS"></div>
-		</div>
-	<br>
-	<?php echo $this -> Form -> submit('Enviar mensagem', array('class' => 'btn btn-default btn-block btn-lg btn-info')); ?>
-	<?php echo $this -> Form -> end();?>
+		<?php echo $this -> Form -> submit('Enviar mensagem', array('class' => 'btn btn-default btn-block btn-lg btn-info')); ?>
+		<?php echo $this -> Form -> end();?>
 	</div>
-	</div>
-	
-	
+</div>	

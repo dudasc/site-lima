@@ -17,7 +17,7 @@ class OrcamentosController extends AppController {
 			$fone = $this->data['Orcamento']['telefone'];
 			$cidade = $this->data['Orcamento']['cidade'];
 			$ambiente = $this->data['Orcamento']['ambiente'];
-			$msg = '<p>Cliente: '.$name.'<br>Telefone: '.$fone . "<br>Tipo de ambiente:".$ambiente.'</p><br>' . $this->data['Orcamento']['descricao'].'</p>';
+			$msg = '<p>Cliente: '.$name.'<br>Cidade: '$cidade.'<br>Telefone: '.$fone . "<br>Tipo de ambiente:".$ambiente.'</p><br>' . $this->data['Orcamento']['descricao'].'</p>';
 
 			$this->Email->sendAs = 'both';
 			// html, text, both
