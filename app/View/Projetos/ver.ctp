@@ -8,7 +8,7 @@
 
 <?php echo $projeto['Projeto']['descricao']?>
 <br>
-<h3>Fotos do projetos</h3>
+<h3>Fotos do projeto</h3>
 <hr>
 <div class="row"> 
    <?php

@@ -17,18 +17,11 @@ class OrcamentosController extends AppController {
 			$fone = $this->data['Orcamento']['telefone'];
 			$cidade = $this->data['Orcamento']['cidade'];
 			$ambiente = $this->data['Orcamento']['ambiente'];
-			$msg = '<p>Telefone: '.$fone . "<br>Tipode ambiente:".$ambiente.'</p><br>' . $this->data['Orcamento']['descricao'].'</p>';
-			//if (!preg_match("/<([^>]+)>/i", $name) and !preg_match("/<([^>]+)>/i", $from) and
-			//	!preg_match("/<([^>]+)>/i", $msg)) {
-			$this->Email->sendAs = 'text';
-			// html, text, both
-			
-			// especifica variavel da mensagem para o template
-			//$this -> Email -> layout = 'default';
-			// views/elements/email/html/contact.ctp
-			//$this -> Email -> template = 'default';
+			$msg = '<p>Cliente: '.$name.'<br>Telefone: '.$fone . "<br>Tipo de ambiente:".$ambiente.'</p><br>' . $this->data['Orcamento']['descricao'].'</p>';
 
-			// set view variables as normal
+			$this->Email->sendAs = 'both';
+			// html, text, both
+
 			$this->set('from', $name);
 			$this->set('msg', $msg);
 			$this->Email->to = 'contato@limamoveissobmedida.com.br';
@@ -42,7 +35,7 @@ class OrcamentosController extends AppController {
 								<button type="button" class="close" data-dismiss="alert">
 									&times;
 								</button>
-								Seu orçamento foi enviado com sucesso! Aguarde que retornaremos o contato.
+								Seu orçamento foi enviado com sucesso! Em breve retornaremos seu contato. Obrigado.
 						  </div>', 'default');
 			} else {
 				$this->Session->setFlash('<div class="alert alert-danger">
