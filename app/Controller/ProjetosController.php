@@ -7,7 +7,7 @@ class ProjetosController extends AppController {
 	
 	public function index() {
 		$this->layout = 'paginas';
-		$opcoes = array('fields' => array('id', 'nome', 'substring(`Projeto`.`descricao`,1, 200) as "descricao"'), 
+		$opcoes = array('fields' => array('id', 'nome', 'substring('descricao',1, 200) as "descricao"'), 
 		'order' => array('id' => 'DESC'), 'limit' => 4);
 		//$projetos = $this->Projeto->find('all', $opcoes);
 		$this->paginate = $opcoes;
