@@ -9,7 +9,7 @@
 
 	<?php echo $this -> Form -> label('User.email', 'E-mail'); ?>
 	<div class="form-group">
-	<?php echo $this -> Form -> email('email', array('label' => false, 'class' => 'form-control input-md', 'id' => 'nome_id', 'placeholder' => 'Nome do ambiente')); ?>
+	<?php echo $this -> Form -> email('email', array('label' => false, 'class' => 'form-control input-md', 'id' => 'email_id', 'placeholder' => 'E-mail')); ?>
 	</div>
 
 	<?php echo $this -> Form -> label('User.username', 'login'); ?>
