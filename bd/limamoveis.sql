@@ -1,9 +1,9 @@
--- phpMyAdmin SQL Dump
+﻿-- phpMyAdmin SQL Dump
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: 03-Mar-2016 às 16:34
+-- Generation Time: 05-Mar-2016 às 18:58
 -- Versão do servidor: 10.1.9-MariaDB
 -- PHP Version: 5.6.15
 
@@ -77,15 +77,16 @@ CREATE TABLE `projetos` (
 CREATE TABLE `users` (
   `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(50) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL
+  `password` varchar(255) DEFAULT NULL,
+  `email` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `password`) VALUES
-(1, 'admin', 'a0c36e79de341654592ddb90b128a7a2');
+INSERT INTO `users` (`id`, `username`, `password`, `email`) VALUES
+(1, 'admin', 'a0c36e79de341654592ddb90b128a7a2', 'admin@gmail.comssss');
 
 --
 -- Indexes for dumped tables
@@ -121,7 +122,8 @@ ALTER TABLE `projetos`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- AUTO_INCREMENT for dumped tables
