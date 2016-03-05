@@ -1,6 +1,7 @@
 <?php
 class UsersController extends AppController {
 	public $name = 'Users';
+
 	public function beforeFilter() {
 		parent::beforeFilter();
 		$this->Auth->allow('admin');
@@ -9,6 +10,7 @@ class UsersController extends AppController {
 	public function index() {
 		$this->redirect($this->login());
 	}
+
 	public function login() {
 		$this->layout = 'login';
 
@@ -56,8 +58,32 @@ class UsersController extends AppController {
 				//$this->redirect('admin_index');
 				//$this->redirect($this->referer());
 			}
+		}		
+	}
+
+	public function recuperarSenha(){
+		$this->layout = 'painel';
+		if($this->request->is('post')){
+			$email = $this->data['User']['email'];
+
+			$opcoes = array(
+                'conditions' => array('email =' => $email)
+            );
+            $res = $this->User->find('all', $opcoes);
+
+            if($res){
+				$this->Session->setFlash(__('<div class="alert alert-warning">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							Função indisponível no momento.
+						  </div>'));
+            }else{
+            	$this->Session->setFlash(__('<div class="alert alert-warning">
+							<button type="button" class="close" data-dismiss="alert">&times;</button>
+							Função indisponível no momento.
+						  </div>'));
+            }
+            $this->redirect('login');
 		}
-		
 	}
 }
 ?>

@@ -26,6 +26,18 @@ class User extends AppModel {
 				'message' => 'Senhas não conferem.',
 			),
 		),
+
+		'email' => array(
+			'required' => array(
+				'rule' => array('notEmpty'),
+				'message' => 'Campo obrigatório',
+			),
+
+			'isUnique' => array(
+				'rule' => array('isUnique', true),
+				'message' => 'Este e-mail de usuário já existe',
+			),
+		),
 	);
 
 	public function confirmaSenha($data) {

@@ -15,21 +15,13 @@ class Ambiente extends AppModel {
 		'id',
 		'nome' => array(
 			'required' => array(
-				'rule' => array('notEmpty'),
+				'rule' => 'notEmpty',
 				'message' => 'A username is required',
 			),
+			'caracteres' => array(
+		    	'rule' => array('minLength', 2),
+		      	'message' => 'Deve conter no mínimo 2 caracteres',
+		    )			
 		)
 	);
-
-
-/*
-	public $validate = array( //campo que deve ser validado
-		'nome' => array( //alias da validação
-			'notempty' => array(
-				'rule' => 'notBlank', //validação para não aceitar vazio
-				'message' => 'Você deve preencher este campo', //erro
-			),
-		),
-	);
-	*/
 }

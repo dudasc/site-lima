@@ -45,6 +45,5 @@ class ContatosController extends AppController {
 			}
 			$this->redirect($this->referer());
 		}
-
 	}
 }

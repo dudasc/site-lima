@@ -52,7 +52,7 @@ class AmbientesController extends AppController {
 						  </div>', 'default');
 
 				} else {
-					$this->Session->setFlash('<div class="alert alert-warning">
+					$this->Session->setFlash('<div class="alert alert-danger">
 								<button type="button" class="close" data-dismiss="alert">
 									&times;
 								</button>
@@ -72,7 +72,7 @@ class AmbientesController extends AppController {
 						Dados cadastrados com sucesso.
 				  	</div></p>');
 				} else {
-					$this->Session->setFlash('<div class="alert alert-error">
+					$this->Session->setFlash('<div class="alert alert-danger">
 						<button type="button" class="close" data-dismiss="alert">&times;</button>
 						Erro ao cadastrar dados.
 				  	</div>');

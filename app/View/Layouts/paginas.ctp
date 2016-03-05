@@ -15,7 +15,6 @@
 	    	</div>
 	    </div>
 	    <?php echo $this->element('footer'); ?>
-	    <script src='https://www.google.com/recaptcha/api.js?hl=pt-BR'></script>
     </body>
 	<?php  //echo $this->element('sql_dump'); ?>
 </html>
