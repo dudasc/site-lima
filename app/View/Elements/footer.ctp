@@ -1,10 +1,13 @@
 <footer class="container-fluid" id="footer">
     <div class="container">
         <div class="row">
+          <ul>
+             <li><a href="admin" target="_blank">Intranet</a></li> -
+             <li><a href="http://webmail.hostinger.com.br" target="_blank">Webmail</a></li>
+          </ul>
         	<p>Copyright &copy; Lima Móveis - 2016<br>
         	<span>desenvolvimento: esc</span>
         	</p>
-
         </div>
     </div>
 </footer>
