@@ -109,6 +109,31 @@ Router::connect('/admin/projetos/delete/:id/',
 	)
 );
 
+Router::connect('/admin/fotoambientes/delete/:id/',
+	array(
+		'controller' => 'fotoambientes',
+		'action' => 'delete',
+		'admin' => true,
+	), // Local à ser redirecionado
+	array(
+		'pass' => array('id'), // Passamos o elemento de rota ":id" para a action (ver) como parâmetro
+		'id' => '[0-9]+', // Especificamos que o elemento de rota ":id" só casará com números (através de expressão regular)
+
+	)
+);
+Router::connect('/admin/fotoprojetos/delete/:id/',
+	array(
+		'controller' => 'fotoprojetos',
+		'action' => 'delete',
+		'admin' => true,
+	), // Local à ser redirecionado
+	array(
+		'pass' => array('id'), // Passamos o elemento de rota ":id" para a action (ver) como parâmetro
+		'id' => '[0-9]+', // Especificamos que o elemento de rota ":id" só casará com números (através de expressão regular)
+
+	)
+);
+
 Router::connect('/admin/projetos/add/:id',
 	array(
 		'controller' => 'projetos',

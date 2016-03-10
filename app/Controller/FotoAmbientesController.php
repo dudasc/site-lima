@@ -40,7 +40,7 @@ class FotoAmbientesController extends AppController {
 							Erro excluir foto. 
 						  </div>');
 		}
-		 $this->redirect($this->referer(array('controller' => 'ambientes', 'action' => 'index', 'admin' => true)));
+		 $this->redirect($this->referer());
     }
 	
 	
