@@ -44,7 +44,7 @@
 					echo  $this->Html->image('uploads/fotos/ambientes/small_'.$item['FotoAmbiente']['nome'], array('class' => 'img-responsive img-hover', 'alt' =>'', 'title' => ''), array('admin' => true));
    					
    					
-   					echo $this->Html->link('Excluir', array('controller'=>'fotoambientes', 'action' => 'delete',$item['FotoAmbiente']['id']), array('confirm'=>'Deseja excluir a imagem?'));
+   					echo $this->Html->link('Excluir', array('controller'=>'Fotoambientes', 'action' => 'delete',$item['FotoAmbiente']['id']), array('confirm'=>'Deseja excluir a imagem?'));
 					echo '</div>';
 }
 			endforeach;				
