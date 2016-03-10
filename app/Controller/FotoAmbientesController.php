@@ -3,7 +3,6 @@
 App::uses('AppController', 'Controller');
 
 class FotoAmbientesController extends AppController {
-	public $name = 'Fotoambientes';
 
 	public function admin_add() {
 

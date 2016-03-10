@@ -49,7 +49,7 @@
 					echo  $this->Html->image('uploads/fotos/projetos/small_'.$item['FotoProjeto']['nome'], array('alt' =>'', 'title' => ''), array('admin' => true));
    					
    					
-   					echo $this->Html->link('Excluir', array('controller'=>'Fotoprojetos', 'action' => 'delete',$item['FotoProjeto']['id']), array('confirm'=>'Deseja excluir a imagem?'));
+   					echo $this->Html->link('Excluir', array('controller'=>'FotoProjetos', 'action' => 'delete',$item['FotoProjeto']['id']), array('confirm'=>'Deseja excluir a imagem?'));
 
 					echo '</div>';
 				}
