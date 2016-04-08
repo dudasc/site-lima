@@ -1,30 +1,52 @@
+<!-- Corousel -->
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
     <li data-target="#carousel-example-generic" data-slide-to="1"></li>
     <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <?php
-        echo $this->Html->image('04.jpg', array('alt' => ''));
+        echo $this->Html->image('01.jpg', array('alt' => ''));
+      ?>      
+    </div>
+    <div class="item">
+     <?php
+      echo $this->Html->image('02.jpg', array('alt' => ''));
       ?>
-
-      <div class="carousel-caption">
-        
-      </div>
+    </div>
+    <div class="item">
+     <?php
+      echo $this->Html->image('03.jpg', array('alt' => ''));
+      ?>      
+    </div>
+    <div class="item">
+     <?php
+      echo $this->Html->image('04.jpg', array('alt' => ''));
+      ?>      
     </div>
     <div class="item">
      <?php
       echo $this->Html->image('05.jpg', array('alt' => ''));
-      ?>
-
-      <div class="carousel-caption">
-      
-      </div>
+      ?>      
+    </div>
+    <div class="item">
+     <?php
+      echo $this->Html->image('06.jpg', array('alt' => ''));
+      ?>      
+    </div>
+    <div class="item">
+     <?php
+      echo $this->Html->image('07.jpg', array('alt' => ''));
+      ?>      
     </div>
   </div>
 

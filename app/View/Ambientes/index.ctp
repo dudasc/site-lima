@@ -4,7 +4,7 @@
     </div>
 </div>
 
-<p>Selecione o ambiente desejado no meu abaixo.</p>
+<p>Selecione o ambiente desejado no menu abaixo.</p>
 <br><br>
 <div class="row">
     <div class="col-md-3">    
