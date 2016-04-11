@@ -353,11 +353,11 @@ public function setup(Model $model, $settings = Array()){
         $all_str = "abcdefghijlkmnopqrstuvxyzw1234567890";
         $string = "";
         for ($i = 0;$i <= $tamanho;$i++){
-           $string .= $all_str[mt_rand(0,36)];
+           $string .= $all_str[mt_rand(0,35)];
         }
         // $string = ereg_replace("[^a-zA-Z0-9_.]", "", $string);
         //$string = strtolower($string);
-       return $string.".jpg";
+       return $string;
     }
 
     /**
