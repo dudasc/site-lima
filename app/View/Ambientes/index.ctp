@@ -26,11 +26,17 @@
     	?> 
         <h2><?php echo $ambiente['Ambiente']['nome'];?></h2>    
         <br>
-        <div class="row"> 
+        
 	       <?php
-	       foreach($ambiente as $fotos){}	               
+	       foreach($ambiente as $fotos){}
+	       	               
 	            if(count($fotos) >= 0){
+	            	
+$i = 0;
 					foreach($fotos as $item):
+						if($i % 4 == 0 or $i == 0){
+	            		echo '<div class="row"> ';
+	            	}
 						echo '<div class="col-md-3">';
 						$thumb =  $this->Html->image("uploads/fotos/ambientes/small_".$item['nome'], array('alt' =>'', 'title' => '', 'class' => 'img-responsive img-hover'));
 						$foto =  "../../img/uploads/fotos/ambientes/".$item['nome'];
@@ -40,12 +46,17 @@
 		     			data-lightview-title="'.$item['descricao'].'"
 		     			data-lightview-caption="">'.$thumb.'</a>';		 		
 			 			echo '</div>';
+			 			$i++;
+			 			if($i % 4 == 0 or $i == 0){
+		            		echo '</div>';
+		            	}
+		            	
 					endforeach;
 				}else{
 					echo '<p>Não há fotos para mostrar</p>';
 				}
 			?>         
-		</div>	  
+		
 		<?php }?>
     </div>
 </div>

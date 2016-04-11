@@ -10,11 +10,15 @@
 <br>
 <h3>Fotos do projeto</h3>
 <hr>
-<div class="row"> 
+
    <?php
    foreach($projeto as $fotos){}               
         if(count($fotos) > 0){
+        	$i = 0;
 			foreach($fotos as $item):
+				if($i % 4 == 0 or $i == 0){
+	            		echo '<div class="row"> ';
+	            	}
 			echo '<div class="col-md-3">';
 				$thumb =  $this->Html->image("uploads/fotos/projetos/small_".$item['nome'], array('alt' =>'', 'title' => '', 'class' => 'img-responsive img-hover'));
 			$foto =  "../../img/uploads/fotos/projetos/".$item['nome'];
@@ -23,7 +27,10 @@
 	    	data-lightview-group="example"
  			data-lightview-caption="">'.$thumb."</a>";		 		
  			echo '</div>';
+ 			$i++;
+			 			if($i % 4 == 0 or $i == 0){
+		            		echo '</div>';
+		            	}
 		endforeach;
 	}
 	?>
-</div>

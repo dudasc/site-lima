@@ -343,15 +343,21 @@ public function setup(Model $model, $settings = Array()){
         if(file_exists($path)){
             $name = time().$name;
         }
-        return $name;
+        return $name.".jpg";
     }
     /**
-     * Remove caracteres especiais e retorna em minusculo
+     * Remove caracteres especiais e retorna em minusculo e gera um nome randomico
      */
     private function __cleanName($string){
-       $string = ereg_replace("[^a-zA-Z0-9_.]", "", $string);
-       $string = strtolower($string);
-       return $string;
+        $tamanho = mt_rand(10,20);
+        $all_str = "abcdefghijlkmnopqrstuvxyzw1234567890";
+        $string = "";
+        for ($i = 0;$i <= $tamanho;$i++){
+           $string .= $all_str[mt_rand(0,36)];
+        }
+        // $string = ereg_replace("[^a-zA-Z0-9_.]", "", $string);
+        //$string = strtolower($string);
+       return $string.".jpg";
     }
 
     /**
