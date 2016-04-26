@@ -31,7 +31,7 @@
                 <p><?php echo strip_tags($item[0]['descricao']);?>...</p>
                
                 <?php
-                echo $this->Html->link('Visualizar projeto', array('controller'=>'projetos', 'action' => 'ver', 'id' => $item['Projeto']['id'], 'titulo' => Inflector::slug(strtolower($item['Projeto']['nome']))), array('class'=>'btn btn-info', 'escape'=> false));
+                echo $this->Html->link('Visualizar projeto', array('controller'=>'projetos', 'action' => 'ver', 'id' => $item['Projeto']['id'], 'titulo' => Inflector::slug(strtolower($item['Projeto']['nome']))), array('class'=>'btn btn-default', 'escape'=> false));
                 ?>
             </div>
         </div>

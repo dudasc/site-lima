@@ -53,7 +53,7 @@
 			<?php echo $this -> Form -> label('Descreva seu projeto'); ?>
 			<?php echo $this -> Form -> textarea('descricao', array( 'class' => 'form-control', 'id' => 'desc_id')); ?>
 		</div>
-		<?php echo $this -> Form -> submit('Enviar mensagem', array('class' => 'btn btn-default btn-block btn-lg btn-info')); ?>
+		<?php echo $this -> Form -> submit('Enviar mensagem', array('class' => 'btn btn-default btn-block btn-lg')); ?>
 		<?php echo $this -> Form -> end();?>
 	</div>
 </div>	

@@ -1,15 +1,34 @@
-<footer class="container-fluid" id="footer">
+<footer id="footer">
+<div class="container-fluid a">
     <div class="container">
         <div class="row">
+        <ul class="menu-footer">
+            <li><?php echo $this->Html->link('Página inicial', array('controller' => 'pages', 'action' => 'index'), array('title' => 'Home')); ?></li>
+                            <li><?php echo $this->Html->link('Sobre', array('controller' => 'pages', 'action' => 'sobre'), array('title' => 'Sobre a empresa')); ?></li>
+
+                            <li><?php echo $this->Html->link('Show-room', array('controller' => 'ambientes', 'action' => 'index'), array('title' => 'Ambientes')); ?></li>
+
+                            <li><?php echo $this->Html->link('Projetos', array('controller' => 'projetos', 'action' => 'index'), array('title' => 'Conheça nossos projetos')); ?></li>
+
+                            <li><?php echo $this->Html->link('Orçamento', array('controller' => 'orcamentos', 'action' => 'index'), array('title' => 'Solicite seu orçamento online')); ?></li>
+
+                            <li><?php echo $this->Html->link('Contato', array('controller' => 'contatos', 'action' => 'index'), array('title' => 'Entre em contato')); ?></li>
+        </ul>
           <ul>
              <li><a href="http://www.limamoveissobmedida.com.br/admin" target="_blank">Intranet</a></li> -
-             <li><a href="http://webmail.hostinger.com.br" target="_blank">Webmail</a></li>
-          </ul>
-        	<p>Copyright &copy; Lima Móveis - 2016<br>
-        	<span>desenvolvimento: esc</span>
-        	</p>
-        </div>
+         <li><a href="http://webmail.hostinger.com.br" target="_blank">Webmail</a></li>
+        </ul>
+        	
+      </div>
     </div>
+  </div>
+  <div class="container-fluid b">
+    <div class="container">
+      <p>Copyright &copy; Lima Móveis - 2016<br>
+          <span>desenvolvimento: esc</span>
+        </p>
+    </div>
+  </div>
 </footer>
 
 <script>

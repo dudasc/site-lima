@@ -34,7 +34,7 @@
 			<?php echo $this->Form->textarea('Contato.msg', array('class' => 'form-control', 'id' => 'msg_id')); ?>
 		</div>
 		
-	<?php echo $this->Form->submit('Enviar mensagem', array('class' => 'btn btn-default btn-block btn-info btn-lg')); ?>
+	<?php echo $this->Form->submit('Enviar mensagem', array('class' => 'btn btn-default btn-block btn-lg')); ?>
 	<?php echo $this->Form->end();?>
 
 	<br><br>

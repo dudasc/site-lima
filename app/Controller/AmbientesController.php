@@ -12,6 +12,7 @@ class AmbientesController extends AppController {
 		if ($this->request->is('GET')) {
 			$this->Ambiente->id = $id;
 			$ambiente = $this->Ambiente->read();
+			$this->set('title_for_layout', $ambiente['Ambiente']['nome']);
 			$this->set('ambiente', $ambiente);
 
 			//consulta as fotos do ambiente

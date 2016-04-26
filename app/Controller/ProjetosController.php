@@ -132,11 +132,14 @@ class ProjetosController extends AppController {
 	}
 
 	public function ver($id = null){
+		$this->set('title_for_layout', 'adsfasfaf asdf asdf asdf asdf ');
 		$this->layout = 'paginas';
 		$this->Projeto->id = $id;
 		if ($this->request->is('get')) {
 
 			$this->request->data = $this->Projeto->read();
+			//die(var_dump($this->request->data));
+			$this->set('title_for_layout', $this->request->data['Projeto']['nome']);
 			$this->set('projeto', $this->request->data);
 		}
 	}
