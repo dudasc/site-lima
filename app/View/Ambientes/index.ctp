@@ -13,35 +13,37 @@
     <div class="row">
         <h1 class="page-header text-center">AMBIENTES</h1>
     </div>
+    <div class="container">
+        <div class="row">
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+            <br>
+            <p class="text-center">Selecione o ambiente desejado no menu abaixo.</p>
+            <div class="col-md-4 col-md-offset-4" >
 
-    <div class="row">
-        <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-        <br>
-        <p class="text-center">Selecione o ambiente desejado no menu abaixo.</p>
-        <div class="col-md-4 col-md-offset-4" >
-
-            <form >
-                <select class="form-control" id="select-ambiente">
-                    <option>Selecione...</option>
-                    <?php
-                    foreach ($ambientes as $item):
-                        echo '<option value="' . $item['Ambiente']['id'] . "/" . Inflector::slug(strtolower($item['Ambiente']['nome'])) . '">';
-                        echo $item['Ambiente']['nome'];
-                        //echo $this->Html->link($item['Ambiente']['nome'], array('controller'=>'ambientes', 'action' => 'index', 'id' => $item['Ambiente']['id'], 'titulo' => Inflector::slug(strtolower($item['Ambiente']['nome']))), array('class'=>'list-group-item', 'escape'=> false));
-                        echo '</option>';
-                    endforeach;
-                    ?>					  
-                </select>
-            </form>
+                <form >
+                    <select class="form-control" id="select-ambiente">
+                        <option>Selecione...</option>
+                        <?php
+                        foreach ($ambientes as $item):
+                            echo '<option value="' . $item['Ambiente']['id'] . "/" . Inflector::slug(strtolower($item['Ambiente']['nome'])) . '">';
+                            echo $item['Ambiente']['nome'];
+                            //echo $this->Html->link($item['Ambiente']['nome'], array('controller'=>'ambientes', 'action' => 'index', 'id' => $item['Ambiente']['id'], 'titulo' => Inflector::slug(strtolower($item['Ambiente']['nome']))), array('class'=>'list-group-item', 'escape'=> false));
+                            echo '</option>';
+                        endforeach;
+                        ?>					  
+                    </select>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <h2 class="text-center"><?php echo $ambiente['Ambiente']['nome']; ?></h2>  
-        <br>  
+        <div class="row">
+            <h2 class="text-center"><?php echo $ambiente['Ambiente']['nome']; ?></h2>  
+            <br>  
+        </div>
     </div>
 </div>
 
 <div class="container-fluid">
+
     <div class="row fotos-ambientes">
         <?php
         foreach ($ambiente as $fotos) {
