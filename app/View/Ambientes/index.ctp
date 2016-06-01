@@ -43,7 +43,7 @@
 </div>
 
 <div class="container-fluid">
-
+<?php if(!empty($ambiente)){?>
     <div class="row fotos-ambientes">
         <?php
         foreach ($ambiente as $fotos) {
@@ -67,4 +67,5 @@
         //}
         ?>         
     </div>
+    <?php }?>
 </div>
