@@ -6,7 +6,7 @@ class AmbientesController extends AppController {
 	public $uses = array('Ambiente', 'FotoAmbiente');
 
 	public function index($id = null) {
-		$this->layout = 'paginas';
+		$this->layout = 'default';
 
 		//quando seleciona um ambiente
 		if ($this->request->is('GET')) {

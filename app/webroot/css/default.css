@@ -14,9 +14,29 @@ body{
 	border: 1px solid #f2f2f2;
 	padding: 4px;
 	border-radius: 5px;
+
 }
 .foto-projeto:hover{
 	border: 1px solid #999;
+	
+}
+
+.fotos-ambientes{
+	padding-right: 1px;
+	padding-left: 1px;
+}
+
+.fotos-ambientes .col-sm-6, .fotos-ambientes .col-md-4, .fotos-ambientes .col-xs-12, .fotos-ambientes .col-lg-2{
+	padding: 1px !important;
+
+}
+
+.img-hover{
+	
+	transition: all 0.3s ease;
+}
+.img-hover:hover{
+	opacity: 0.7;
 	
 }
 
@@ -55,6 +75,10 @@ ul.nav{
 .dropdown-menu li a{
 	padding: 10px !important;
 	padding-right: 80px !important;
+}
+
+#select-ambiente option{
+	padding: 10px !important;
 }
 /*
 .contact-area{
@@ -170,8 +194,10 @@ text-align: center
 h1{
 	color: #000 !important;
 	font-size: 4em !important;
-	text-shadow: 2px 1px 1px #999
+	text-shadow: 2px 1px 1px #999;
 }
+
+
 
 h3{
 	color: #8B4726;
