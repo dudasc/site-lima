@@ -10,12 +10,12 @@
     });
 </script>
 <div class="container-fluid top-page">			
-    <div class="row">
-        <h1 class="page-header text-center">AMBIENTES</h1>
-    </div>
+    
     <div class="container">
         <div class="row">
-            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+        <h1 class="page-header texdt-center">Ambientes</h1>
+    
+            <p class="text-cednter">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
             <br>
             <p class="text-center">Selecione o ambiente desejado no menu abaixo.</p>
             <div class="col-md-4 col-md-offset-4" >
@@ -39,10 +39,7 @@
             <h2 class="text-center"><?php echo $ambiente['Ambiente']['nome']; ?></h2>  
             <br>  
         </div>
-    </div>
-</div>
-
-<div class="container-fluid">
+ 
 <?php if(!empty($ambiente)){?>
     <div class="row fotos-ambientes">
         <?php
@@ -52,11 +49,11 @@
 
         //if(count($fotos) >= 0){	 
         foreach ($fotos as $item):
-            echo '<div class="col-sm-6 col-md-3 col-xs-12 col-lg-2">';
-            $thumb = $this->Html->image("uploads/fotos/ambientes/small_" . $item['nome'], array('alt' => '', 'title' => '', 'class' => 'img-responsive img-hover'));
+            echo '<div class="col-sm-6 col-md-3 col-xs-12 col-lg-2 thumb">';
+            $thumb = $this->Html->image("uploads/fotos/ambientes/small_" . $item['nome'], array('alt' => '', 'title' => '', 'class' => 'img-responsive img-hover',));
             $foto = "../../img/uploads/fotos/ambientes/" . $item['nome'];
             //$thumb = 'http://placehold.it/750x450';
-            echo '<a href="' . $foto . '" class="thumsbnail lightview" 
+            echo '<a href="' . $foto . '" class="thumbnail lightview" 
 					    	data-lightview-group="example"
 				 			data-lightview-title="' . $item['descricao'] . '"
 				 			data-lightview-caption="">' . $thumb . '</a>';
@@ -67,5 +64,7 @@
         //}
         ?>         
     </div>
-    <?php }?>
-</div>
+
+  <?php }?>
+  </div>
+  </div>

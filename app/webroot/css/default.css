@@ -30,10 +30,17 @@ body{
 	padding: 1px !important;
 
 }
+.fotos-ambientes .thumbnail{
+    padding: 0px;
+     margin-bottom: 0px;
+
+    border: none; 
+    border-radius: none; 
+}
 
 .img-hover{
 	
-	transition: all 0.3s ease;
+	transition: all 0.3s linear;
 }
 .img-hover:hover{
 	opacity: 0.7;
