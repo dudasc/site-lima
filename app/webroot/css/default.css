@@ -31,11 +31,11 @@ body{
 
 }
 .fotos-ambientes .thumbnail{
-    padding: 0px;
-     margin-bottom: 0px;
+	 
+    padding: 4px;
+     margin: 5px;
 
-    border: none; 
-    border-radius: none; 
+    /* border-radius: 4px; */
 }
 
 .img-hover{
